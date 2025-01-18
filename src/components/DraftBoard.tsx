@@ -9,8 +9,6 @@ const DraftBoard = () => {
   const [draftedWrestlers, setDraftedWrestlers] = useState<Wrestler[]>([]);
   const [draggingWrestler, setDraggingWrestler] = useState<Wrestler | null>(null);
 
-  const promotions = ["WWE", "AEW", "NJPW", "TNA"] as const;
-
   const handleDragStart = (wrestler: Wrestler) => {
     setDraggingWrestler(wrestler);
   };
@@ -40,32 +38,24 @@ const DraftBoard = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="space-y-8">
           <h2 className="text-2xl font-semibold text-white">Available Wrestlers</h2>
-          
-          {promotions.map((promotion) => (
-            <div key={promotion} className="space-y-4">
-              <h3 className="text-xl text-primary font-medium">{promotion}</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {availableWrestlers
-                  .filter((wrestler) => wrestler.promotion === promotion)
-                  .map((wrestler) => (
-                    <div
-                      key={wrestler.id}
-                      draggable
-                      onDragStart={() => handleDragStart(wrestler)}
-                      onDragEnd={handleDragEnd}
-                      onDrop={() => handleDrop(wrestler)}
-                      onDragOver={(e) => e.preventDefault()}
-                    >
-                      <WrestlerCard
-                        wrestler={wrestler}
-                        isDragging={draggingWrestler?.id === wrestler.id}
-                        className="hover:scale-105 cursor-grab active:cursor-grabbing"
-                      />
-                    </div>
-                  ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {availableWrestlers.map((wrestler) => (
+              <div
+                key={wrestler.id}
+                draggable
+                onDragStart={() => handleDragStart(wrestler)}
+                onDragEnd={handleDragEnd}
+                onDrop={() => handleDrop(wrestler)}
+                onDragOver={(e) => e.preventDefault()}
+              >
+                <WrestlerCard
+                  wrestler={wrestler}
+                  isDragging={draggingWrestler?.id === wrestler.id}
+                  className="hover:scale-105 cursor-grab active:cursor-grabbing"
+                />
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         <div

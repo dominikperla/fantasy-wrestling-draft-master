@@ -18,43 +18,56 @@ export const wrestlers: Wrestler[] = [
     championships: ["TNA World Heavyweight Champion"],
     image: "/placeholder.svg"
   },
-  // WWE Roster (Sample)
-  {
-    id: "roman-reigns",
-    name: "Roman Reigns",
-    promotion: "WWE",
-    image: "/placeholder.svg"
-  },
-  {
-    id: "seth-rollins",
-    name: "Seth Rollins",
-    promotion: "WWE",
-    image: "/placeholder.svg"
-  },
-  // AEW Roster (Sample)
-  {
-    id: "mjf",
-    name: "MJF",
-    promotion: "AEW",
-    image: "/placeholder.svg"
-  },
-  {
-    id: "kenny-omega",
-    name: "Kenny Omega",
-    promotion: "AEW",
-    image: "/placeholder.svg"
-  },
-  // NJPW Roster (Sample)
-  {
-    id: "kazuchika-okada",
-    name: "Kazuchika Okada",
-    promotion: "NJPW",
-    image: "/placeholder.svg"
-  },
-  {
-    id: "will-ospreay",
-    name: "Will Ospreay",
-    promotion: "NJPW",
-    image: "/placeholder.svg"
-  },
+  // Available Wrestlers
+  { id: "akira-tozawa", name: "Akira Tozawa", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "bron-breakker", name: "Bron Breakker", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "bronson-reed", name: "Bronson Reed", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "creed-brothers", name: "Creed Brothers", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "carlito", name: "Carlito", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "chad-gable", name: "Chad Gable", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "cm-punk", name: "CM Punk", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "legado-del-fantasma", name: "Legado Del Fantasma", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "dominik-mysterio", name: "Dominik Mysterio", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "dragon-lee", name: "Dragon Lee", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "drew-mcintyre", name: "Drew McIntyre", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "war-raiders", name: "War Raiders", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "finn-balor", name: "Finn Balor", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "gunther", name: "Gunther", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "ilja-dragunov", name: "Ilja Dragunov", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "jd-mcdonagh", name: "JD McDonagh", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "jey-uso", name: "Jey Uso", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "the-miz", name: "The Miz", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "alpha-academy", name: "Alpha Academy", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "sami-zayn", name: "Sami Zayn", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "seth-rollins", name: "Seth Rollins", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "penta", name: "Penta", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "tyler-bate", name: "Tyler Bate", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "aj-styles", name: "AJ Styles", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "mcmg", name: "MCMG", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "austin-theory", name: "Austin Theory", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "cody-rhodes", name: "Cody Rhodes", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "carmelo-hayes", name: "Carmelo Hayes", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "pretty-deadly", name: "Pretty Deadly", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "randy-orton", name: "Randy Orton", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "luke-gallows", name: "Big Money Luke Gallows", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "tommaso-ciampa", name: "Tommaso Ciampa", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "johnny-gargano", name: "Johnny Gargano", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "kevin-owens", name: "Kevin Owens", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "jacob-fatu", name: "Jacob Fatu", promotion: "WWE", image: "/placeholder.svg" },
+  { id: "andrade", name: "Andrade", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "bandido", name: "Bandido", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "will-ospreay", name: "Will Ospreay", promotion: "NJPW", image: "/placeholder.svg" },
+  { id: "kenny-omega", name: "Kenny Omega", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "mjf", name: "MJF", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "matt-cardona", name: "Matt Cardona", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "adam-page", name: "Adam Page", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "adam-cole", name: "Adam Cole", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "big-bill", name: "Big Bill", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "edge", name: "Edge", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "dustin-rhodes", name: "Dustin Rhodes", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "christian-cage", name: "Christian Cage", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "jon-moxley", name: "Jon Moxley", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "kyle-fletcher", name: "Kyle Fletcher", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "malakai-black", name: "Malakai Black", promotion: "AEW", image: "/placeholder.svg" },
+  { id: "miro", name: "Miro", promotion: "AEW", image: "/placeholder.svg" }
 ];
