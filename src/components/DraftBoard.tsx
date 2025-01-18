@@ -2,6 +2,7 @@ import { useState } from "react";
 import { wrestlers } from "../data/wrestlers";
 import { Wrestler } from "../types/wrestler";
 import WrestlerCard from "./WrestlerCard";
+import AddWrestlerForm from "./AddWrestlerForm";
 import { toast } from "@/components/ui/use-toast";
 
 const DraftBoard = () => {
@@ -20,13 +21,23 @@ const DraftBoard = () => {
   const handleDrop = (wrestler: Wrestler) => {
     if (!draggingWrestler) return;
 
+    // Add TNA promotion when drafted
+    const wrestlerWithTNA = {
+      ...wrestler,
+      promotion: "TNA"
+    };
+
     setAvailableWrestlers(prev => prev.filter(w => w.id !== wrestler.id));
-    setDraftedWrestlers(prev => [...prev, wrestler]);
+    setDraftedWrestlers(prev => [...prev, wrestlerWithTNA]);
     
     toast({
       title: "Wrestler Drafted!",
-      description: `${wrestler.name} has been added to your roster.`,
+      description: `${wrestler.name} has been added to your TNA roster.`,
     });
+  };
+
+  const handleAddCustomWrestler = (newWrestler: Wrestler) => {
+    setAvailableWrestlers(prev => [...prev, newWrestler]);
   };
 
   return (
@@ -37,6 +48,7 @@ const DraftBoard = () => {
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="space-y-8">
+          <AddWrestlerForm onAddWrestler={handleAddCustomWrestler} />
           <h2 className="text-2xl font-semibold text-white">Available Wrestlers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {availableWrestlers.map((wrestler) => (
