@@ -78,7 +78,7 @@ const DraftBoard = () => {
             }
           }}
         >
-          <h2 className="text-2xl font-semibold text-white mb-6">Your Roster</h2>
+          <h2 className="text-2xl font-semibold text-white mb-6">TNA Roster</h2>
           <div className="grid grid-cols-1 gap-4">
             {draftedWrestlers.map((wrestler) => (
               <WrestlerCard key={wrestler.id} wrestler={wrestler} />
