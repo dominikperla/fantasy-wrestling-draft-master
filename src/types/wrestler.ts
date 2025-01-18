@@ -1,7 +1,7 @@
 export interface Wrestler {
   id: string;
   name: string;
-  promotion: "WWE" | "AEW" | "NJPW" | "TNA";
+  promotion?: string;
   isChampion?: boolean;
   championships?: string[];
   image?: string;

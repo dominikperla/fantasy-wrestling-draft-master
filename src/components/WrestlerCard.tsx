@@ -29,12 +29,14 @@ const WrestlerCard = ({ wrestler, isDragging, className }: WrestlerCardProps) =>
         </div>
         <div className="flex-1">
           <h3 className="text-white font-bold text-lg">{wrestler.name}</h3>
-          <span className="text-primary inline-block px-2 py-1 rounded-full text-sm bg-secondary-dark">
-            {wrestler.promotion}
-          </span>
-          {wrestler.isChampion && (
+          {wrestler.promotion && (
+            <span className="text-primary inline-block px-2 py-1 rounded-full text-sm bg-secondary-dark">
+              {wrestler.promotion}
+            </span>
+          )}
+          {wrestler.isChampion && wrestler.championships && (
             <div className="mt-2">
-              {wrestler.championships?.map((title) => (
+              {wrestler.championships.map((title) => (
                 <span
                   key={title}
                   className="text-champion text-sm font-semibold block"
